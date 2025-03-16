@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latin Third Declension Exercises for Medical Students - Interactive Version</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 30px;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+        }
+        h3 {
+            color: #16a085;
+            margin-top: 20px;
+        }
+        .instructions {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #16a085;
+            margin-bottom: 20px;
+            font-style: italic;
+            color: #2c3e50;
+        }
+        .question {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .exercise-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .separator {
+            border-top: 1px dashed #bdc3c7;
+            margin: 30px 0;
+        }
+        input[type="text"] {
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 300px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .feedback {
+            margin-top: 5px;
+            font-style: italic;
+            min-height: 20px;
+        }
+        .correct {
+            color: #27ae60;
+        }
+        .incorrect {
+            color: #e74c3c;
+        }
+        .hidden {
+            display: none;
+        }
+        .answer-key {
+            background-color: #eaf2f8;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 40px;
+        }
+        .score-display {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .declension-table input {
+            width: 90%;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+        }
+        .section-nav {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .section-nav button {
+            margin: 5px;
+        }
+        .active-section {
+            background-color: #16a085;
+        }
+    </style>
+</head>
+<body>
+    <div class="score-display">
+        Score: <span id="score">0</span>/<span id="total-questions">0</span>
+    </div>
+
+    <h1>Latin Third Declension Exercises for Medical Students - Interactive Version</h1>
+    
+    <div class="instructions">
+        <p>This interactive document contains exercises designed for first-year medical students studying Latin medical terminology, with a focus on the third declension. The exercises are organized in a progressive manner, from beginner to advanced level, to help you gradually build your understanding and skills.</p>
+        <p>Each exercise set focuses on different aspects of Latin third declension nouns commonly used in medical terminology. Complete the exercises and check your answers using the "Check Answer" buttons. Your score will be tracked at the top of the page.</p>
+    </div>
+
+    <div class="section-nav">
+        <button onclick="showSection('beginner')" class="active-section">Beginner Level</button>
+        <button onclick="showSection('intermediate')">Intermediate Level</button>
+        <button onclick="showSection('advanced')">Advanced Level</button>
+        <button onclick="showSection('answer-key')">Answer Key</button>
+    </div>
+
+    <!-- BEGINNER LEVEL -->
+    <div id="beginner" class="exercise-level">
+        <h1>Exercise Set 1: Beginner Level</h1>
+
+        <div class="exercise-section">
+            <h2>Exercise 1A: Understanding the Third Declension</h2>
+            
+            <div class="instructions">
+                <p>The third declension in Latin includes nouns of all three genders (masculine, feminine, and neuter) with various stem patterns. In medical terminology, many anatomical structures and conditions use third declension nouns.</p>
+                <p><strong>Key characteristics of third declension nouns:</strong></p>
+                <ul>
+                    <li>The genitive singular typically ends in -is</li>
+                    <li>Nominative singular endings vary (-x, -s, -r, -o, -en, etc.)</li>
+                    <li>Neuter nouns have the same form in nominative and accusative cases</li>
+                </ul>
+            </div>
+            
+            <div class="question">Match each Latin medical term with its English meaning:</div>
+            
+            <div>
+                <p>1. cor, cordis (n)</p>
+                <input type="text" id="ex1a-1" placeholder="Enter English meaning">
+                <button onclick="checkAnswer('ex1a-1', 'heart')">Check Answer</button>
+                <div id="feedback-ex1a-1" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>2. pulmo, pulmonis (m)</p>
+                <input type="text" id="ex1a-2" placeholder="Enter English meaning">
+                <button onclick="checkAnswer('ex1a-2', 'lung')">Check Answer</button>
+                <div id="feedback-ex1a-2" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>3. os, ossis (n)</p>
+                <input type="text" id="ex1a-3" placeholder="Enter English meaning">
+                <button onclick="checkAnswer('ex1a-3', 'bone')">Check Answer</button>
+                <div id="feedback-ex1a-3" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>4. cutis, cutis (f)</p>
+                <input type="text" id="ex1a-4" placeholder="Enter English meaning">
+                <button onclick="checkAnswer('ex1a-4', 'skin')">Check Answer</button>
+                <div id="feedback-ex1a-4" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>5. dens, dentis (m)</p>
+                <input type="text" id="ex1a-5" placeholder="Enter English meaning">
+                <button onclick="checkAnswer('ex1a-5', 'tooth')">Check Answer</button>
+                <div id="feedback-ex1a-5" class="feedback"></div>
+            </div>
+        </div>
+
+        <div class="exercise-section">
+            <h2>Exercise 1B: Identifying Cases</h2>
+            
+            <div class="question">Identify the case and number of each underlined third declension noun:</div>
+            
+            <div>
+                <p>1. The doctor examined the patient's <strong>cor</strong>.</p>
+                <input type="text" id="ex1b-1" placeholder="Enter case and number">
+                <button onclick="checkAnswer('ex1b-1', 'accusative singular')">Check Answer</button>
+                <div id="feedback-ex1b-1" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>2. The structure of the <strong>ossis</strong> was visible on the X-ray.</p>
+                <input type="text" id="ex1b-2" placeholder="Enter case and number">
+                <button onclick="checkAnswer('ex1b-2', 'genitive singular')">Check Answer</button>
+                <div id="feedback-ex1b-2" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>3. The medication affected both <strong>pulmones</strong>.</p>
+                <input type="text" id="ex1b-3" placeholder="Enter case and number">
+                <button onclick="checkAnswer('ex1b-3', 'accusative plural')">Check Answer</button>
+                <div id="feedback-ex1b-3" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>4. The surgeon made an incision in the <strong>cute</strong>.</p>
+                <input type="text" id="ex1b-4" placeholder="Enter case and number">
+                <button onclick="checkAnswer('ex1b-4', 'ablative singular')">Check Answer</button>
+                <div id="feedback-ex1b-4" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>5. The infection spread through the <strong>sanguine</strong>.</p>
+                <input type="text" id="ex1b-5" placeholder="Enter case and number">
+                <button onclick="checkAnswer('ex1b-5', 'ablative singular')">Check Answer</button>
+                <div id="feedback-ex1b-5" class="feedback"></div>
+            </div>
+        </div>
+
+        <div class="exercise-section">
+            <h2>Exercise 1C: Basic Declension Practice</h2>
+            
+            <div class="question">Complete the singular declension for these important medical terms:</div>
+            
+            <div>
+                <p><strong>dens, dentis (m) - tooth</strong></p>
+                <table class="declension-table">
+                    <tr>
+                        <th></th>
+                        <th>Sing.</th>
+                        <th>Plur.</th>
+                    </tr>
+                    <tr>
+                        <td>Nominative</td>
+                        <td><input type="text" id="ex1c-1-nom-s" placeholder="Enter form"></td>
+                        <td>dentes</td>
+                    </tr>
+                    <tr>
+                        <td>Genitive</td>
+                        <td><input type="text" id="ex1c-1-gen-s" placeholder="Enter form"></td>
+                        <td>dentium</td>
+                    </tr>
+                    <tr>
+                        <td>Dative</td>
+                        <td><input type="text" id="ex1c-1-dat-s" placeholder="Enter form"></td>
+                        <td>dentibus</td>
+                    </tr>
+                    <tr>
+                        <td>Accusative</td>
+                        <td><input type="text" id="ex1c-1-acc-s" placeholder="Enter form"></td>
+                        <td>dentes</td>
+                    </tr>
+                    <tr>
+                        <td>Ablative</td>
+                        <td><input type="text" id="ex1c-1-abl-s" placeholder="Enter form"></td>
+                        <td>dentibus</td>
+                    </tr>
+                </table>
+                <button onclick="checkDeclension('ex1c-1', ['dens', 'dentis', 'denti', 'dentem', 'dente'])">Check Answers</button>
+                <div id="feedback-ex1c-1" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p><strong>cutis, cutis (f) - skin</strong></p>
+                <table class="declension-table">
+                    <tr>
+                        <th></th>
+                        <th>Sing.</th>
+                        <th>Plur.</th>
+                    </tr>
+                    <tr>
+                        <td>Nominative</td>
+                        <td><input type="text" id="ex1c-2-nom-s" placeholder="Enter form"></td>
+                        <td>cutes</td>
+                    </tr>
+                    <tr>
+                        <td>Genitive</td>
+                        <td><input type="text" id="ex1c-2-gen-s" placeholder="Enter form"></td>
+                        <td>cutium</td>
+                    </tr>
+                    <tr>
+                        <td>Dative</td>
+                        <td><input type="text" id="ex1c-2-dat-s" placeholder="Enter form"></td>
+                        <td>cutibus</td>
+                    </tr>
+                    <tr>
+                        <td>Accusative</td>
+                        <td><input type="text" id="ex1c-2-acc-s" placeholder="Enter form"></td>
+                        <td>cutes</td>
+                    </tr>
+                    <tr>
+                        <td>Ablative</td>
+                        <td><input type="text" id="ex1c-2-abl-s" placeholder="Enter form"></td>
+                        <td>cutibus</td>
+                    </tr>
+                </table>
+                <button onclick="checkDeclension('ex1c-2', ['cutis', 'cutis', 'cuti', 'cutem', 'cute'])">Check Answers</button>
+                <div id="feedback-ex1c-2" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p><strong>corpus, corporis (n) - body</strong></p>
+                <table class="declension-table">
+                    <tr>
+                        <th></th>
+                        <th>Sing.</th>
+                        <th>Plur.</th>
+                    </tr>
+                    <tr>
+                        <td>Nominative</td>
+                        <td><input type="text" id="ex1c-3-nom-s" placeholder="Enter form"></td>
+                        <td>corpora</td>
+                    </tr>
+                    <tr>
+                        <td>Genitive</td>
+                        <td><input type="text" id="ex1c-3-gen-s" placeholder="Enter form"></td>
+                        <td>corporum</td>
+                    </tr>
+                    <tr>
+                        <td>Dative</td>
+                        <td><input type="text" id="ex1c-3-dat-s" placeholder="Enter form"></td>
+                        <td>corporibus</td>
+                    </tr>
+                    <tr>
+                        <td>Accusative</td>
+                        <td><input type="text" id="ex1c-3-acc-s" placeholder="Enter form"></td>
+                        <td>corpora</td>
+                    </tr>
+                    <tr>
+                        <td>Ablative</td>
+                        <td><input type="text" id="ex1c-3-abl-s" placeholder="Enter form"></td>
+                        <td>corporibus</td>
+                    </tr>
+                </table>
+                <button onclick="checkDeclension('ex1c-3', ['corpus', 'corporis', 'corpori', 'corpus', 'corpore'])">Check Answers</button>
+                <div id="feedback-ex1c-3" class="feedback"></div>
+            </div>
+        </div>
+
+        <div class="nav-buttons">
+            <button onclick="showSection('intermediate')">Next: Intermediate Level</button>
+        </div>
+    </div>
+
+    <!-- INTERMEDIATE LEVEL -->
+    <div id="intermediate" class="exercise-level hidden">
+        <h1>Exercise Set 2: Intermediate Level</h1>
+
+        <div class="exercise-section">
+            <h2>Exercise 2A: Medical Phrases</h2>
+            
+            <div class="question">Translate these medical phrases, paying attention to the correct case endings:</div>
+            
+            <div>
+                <p>1. Inflammation of the lung (inflammatio, inflammationis + pulmo, pulmonis)</p>
+                <input type="text" id="ex2a-1" placeholder="Enter translation">
+                <button onclick="checkAnswer('ex2a-1', 'inflammatio pulmonis')">Check Answer</button>
+                <div id="feedback-ex2a-1" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>2. Disease of the heart (morbus, morbi + cor, cordis)</p>
+                <input type="text" id="ex2a-2" placeholder="Enter translation">
+                <button onclick="checkAnswer('ex2a-2', 'morbus cordis')">Check Answer</button>
+                <div id="feedback-ex2a-2" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>3. Fracture of the bone (fractura, fracturae + os, ossis)</p>
+                <input type="text" id="ex2a-3" placeholder="Enter translation">
+                <button onclick="checkAnswer('ex2a-3', 'fractura ossis')">Check Answer</button>
+                <div id="feedback-ex2a-3" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>4. Examination of the abdomen (examinatio, examinationis + abdomen, abdominis)</p>
+                <input type="text" id="ex2a-4" placeholder="Enter translation">
+                <button onclick="checkAnswer('ex2a-4', 'examinatio abdominis')">Check Answer</button>
+                <div id="feedback-ex2a-4" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>5. Pain in the head (dolor, doloris + caput, capitis)</p>
+                <input type="text" id="ex2a-5" placeholder="Enter translation">
+                <button onclick="checkAnswer('ex2a-5', 'dolor capitis')">Check Answer</button>
+                <div id="feedback-ex2a-5" class="feedback"></div>
+            </div>
+        </div>
+
+        <div class="exercise-section">
+            <h2>Exercise 2B: Complete the Declension</h2>
+            
+            <div class="question">Complete the full declension (singular and plural) for these important medical terms:</div>
+            
+            <div>
+                <p><strong>pulmo, pulmonis (m) - lung</strong></p>
+                <table class="declension-table">
+                    <tr>
+                        <th></th>
+                        <th>Sing.</th>
+                        <th>Plur.</th>
+                    </tr>
+                    <tr>
+                        <td>Nominative</td>
+                        <td><input type="text" id="ex2b-1-nom-s" placeholder="Enter form"></td>
+                        <td><input type="text" id="ex2b-1-nom-p" placeholder="Enter form"></td>
+                    </tr>
+                    <tr>
+                        <td>Genitive</td>
+                        <td><input type="text" id="ex2b-1-gen-s" placeholder="Enter form"></td>
+                        <td><input type="text" id="ex2b-1-gen-p" placeholder="Enter form"></td>
+                    </tr>
+                    <tr>
+                        <td>Dative</td>
+                        <td><input type="text" id="ex2b-1-dat-s" placeholder="Enter form"></td>
+                        <td><input type="text" id="ex2b-1-dat-p" placeholder="Enter form"></td>
+                    </tr>
+                    <tr>
+                        <td>Accusative</td>
+                        <td><input type="text" id="ex2b-1-acc-s" placeholder="Enter form"></td>
+                        <td><input type="text" id="ex2b-1-acc-p" placeholder="Enter form"></td>
+                    </tr>
+                    <tr>
+                        <td>Ablative</td>
+                        <td><input type="text" id="ex2b-1-abl-s" placeholder="Enter form"></td>
+                        <td><input type="text" id="ex2b-1-abl-p" placeholder="Enter form"></td>
+                    </tr>
+                </table>
+                <button onclick="checkFullDeclension('ex2b-1', 
+                    ['pulmo', 'pulmonis', 'pulmoni', 'pulmonem', 'pulmone'],
+                    ['pulmones', 'pulmonum', 'pulmonibus', 'pulmones', 'pulmonibus'])">Check Answers</button>
+                <div id="feedback-ex2b-1" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p><strong>caput, capitis (n) - head</strong></p>
+                <table class="declension-table">
+                    <tr>
+                        <th></th>
+                        <th>Sing.</th>
+                        <th>Plur.</th>
+                    </tr>
+                    <tr>
+                        <td>Nominative</td>
+                        <td><input type="text" id="ex2b-2-nom-s" placeholder="Enter form"></td>
+                        <td><input type="text" id="ex2b-2-nom-p" placeholder="Enter form"></td>
+                    </tr>
+                    <tr>
+                        <td>Genitive</td>
+                        <td><input type="text" id="ex2b-2-gen-s" placeholder="Enter form"></td>
+                        <td><input type="text" id="ex2b-2-gen-p" placeholder="Enter form"></td>
+                    </tr>
+                    <tr>
+                        <td>Dative</td>
+                        <td><input type="text" id="ex2b-2-dat-s" placeholder="Enter form"></td>
+                        <td><input type="text" id="ex2b-2-dat-p" placeholder="Enter form"></td>
+                    </tr>
+                    <tr>
+                        <td>Accusative</td>
+                        <td><input type="text" id="ex2b-2-acc-s" placeholder="Enter form"></td>
+                        <td><input type="text" id="ex2b-2-acc-p" placeholder="Enter form"></td>
+                    </tr>
+                    <tr>
+                        <td>Ablative</td>
+                        <td><input type="text" id="ex2b-2-abl-s" placeholder="Enter form"></td>
+                        <td><input type="text" id="ex2b-2-abl-p" placeholder="Enter form"></td>
+                    </tr>
+                </table>
+                <button onclick="checkFullDeclension('ex2b-2', 
+                    ['caput', 'capitis', 'capiti', 'caput', 'capite'],
+                    ['capita', 'capitum', 'capitibus', 'capita', 'capitibus'])">Check Answers</button>
+                <div id="feedback-ex2b-2" class="feedback"></div>
+            </div>
+        </div>
+
+        <div class="exercise-section">
+            <h2>Exercise 2C: Medical Terminology Formation</h2>
+            
+            <div class="question">Form correct medical terms using the provided components:</div>
+            
+            <div>
+                <p>1. Inflammation (-itis) of the kidney (ren, renis)</p>
+                <input type="text" id="ex2c-1" placeholder="Enter medical term">
+                <button onclick="checkMultipleAnswers('ex2c-1', ['nephritis', 'renitis'])">Check Answer</button>
+                <div id="feedback-ex2c-1" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>2. Study (-logia) of the heart (cor, cordis)</p>
+                <input type="text" id="ex2c-2" placeholder="Enter medical term">
+                <button onclick="checkAnswer('ex2c-2', 'cardiologia')">Check Answer</button>
+                <div id="feedback-ex2c-2" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>3. Excision (-ectomia) of the appendix (appendix, appendicis)</p>
+                <input type="text" id="ex2c-3" placeholder="Enter medical term">
+                <button onclick="checkMultipleAnswers('ex2c-3', ['appendicectomia', 'appendectomia'])">Check Answer</button>
+                <div id="feedback-ex2c-3" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>4. Process of recording (-graphia) the lung (pulmo, pulmonis)</p>
+                <input type="text" id="ex2c-4" placeholder="Enter medical term">
+                <button onclick="checkAnswer('ex2c-4', 'pulmographia')">Check Answer</button>
+                <div id="feedback-ex2c-4" class="feedback"></div>
+            </div>
+        </div>
+
+        <div class="exercise-section">
+            <h2>Exercise 2D: Case in Context</h2>
+            
+            <div class="question">Read the following medical sentences and identify the case of the underlined third declension nouns:</div>
+            
+            <div>
+                <p>1. Medicus <strong>cor</strong> patientis auscultat. (The doctor listens to the patient's heart.)</p>
+                <input type="text" id="ex2d-1" placeholder="Enter case">
+                <button onclick="checkAnswer('ex2d-1', 'accusative')">Check Answer</button>
+                <div id="feedback-ex2d-1" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>2. <strong>Pulmonis</strong> inflammatio respirationem impedit. (The inflammation of the lung impedes breathing.)</p>
+                <input type="text" id="ex2d-2" placeholder="Enter case">
+                <button onclick="checkAnswer('ex2d-2', 'genitive')">Check Answer</button>
+                <div id="feedback-ex2d-2" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>3. Chirurgus <strong>cutem</strong> incidit. (The surgeon cuts the skin.)</p>
+                <input type="text" id="ex2d-3" placeholder="Enter case">
+                <button onclick="checkAnswer('ex2d-3', 'accusative')">Check Answer</button>
+                <div id="feedback-ex2d-3" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>4. Fractura <strong>ossis</strong> gravis est. (The fracture of the bone is serious.)</p>
+                <input type="text" id="ex2d-4" placeholder="Enter case">
+                <button onclick="checkAnswer('ex2d-4', 'genitive')">Check Answer</button>
+                <div id="feedback-ex2d-4" class="feedback"></div>
+            </div>
+        </div>
+
+        <div class="nav-buttons">
+            <button onclick="showSection('beginner')">Previous: Beginner Level</button>
+            <button onclick="showSection('advanced')">Next: Advanced Level</button>
+        </div>
+    </div>
+
+    <!-- ADVANCED LEVEL -->
+    <div id="advanced" class="exercise-level hidden">
+        <h1>Exercise Set 3: Advanced Level</h1>
+
+        <div class="exercise-section">
+            <h2>Exercise 3A: Anatomical Descriptions</h2>
+            
+            <div class="question">Translate these anatomical descriptions, paying attention to the correct form of third declension nouns:</div>
+            
+            <div>
+                <p>1. The base of the lung (basis, basis + pulmo, pulmonis)</p>
+                <input type="text" id="ex3a-1" placeholder="Enter translation">
+                <button onclick="checkAnswer('ex3a-1', 'basis pulmonis')">Check Answer</button>
+                <div id="feedback-ex3a-1" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>2. The apex of the heart (apex, apicis + cor, cordis)</p>
+                <input type="text" id="ex3a-2" placeholder="Enter translation">
+                <button onclick="checkAnswer('ex3a-2', 'apex cordis')">Check Answer</button>
+                <div id="feedback-ex3a-2" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>3. The neck of the femur (cervix, cervicis + femur, femoris)</p>
+                <input type="text" id="ex3a-3" placeholder="Enter translation">
+                <button onclick="checkAnswer('ex3a-3', 'cervix femoris')">Check Answer</button>
+                <div id="feedback-ex3a-3" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>4. The roots of the teeth (radix, radicis + dens, dentis)</p>
+                <input type="text" id="ex3a-4" placeholder="Enter translation">
+                <button onclick="checkAnswer('ex3a-4', 'radices dentium')">Check Answer</button>
+                <div id="feedback-ex3a-4" class="feedback"></div>
+            </div>
+        </div>
+
+        <div class="exercise-section">
+            <h2>Exercise 3B: Medical Reports</h2>
+            
+            <div class="question">Fill in the blanks with the correct form of the Latin term in parentheses:</div>
+            
+            <div>
+                <p>1. Patient presents with acute pain in the __________ (ren, renis - kidney).</p>
+                <input type="text" id="ex3b-1" placeholder="Enter correct form">
+                <button onclick="checkAnswer('ex3b-1', 'rene')">Check Answer</button>
+                <div id="feedback-ex3b-1" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>2. MRI shows abnormal growth in the cerebral __________ (cortex, corticis).</p>
+                <input type="text" id="ex3b-2" placeholder="Enter correct form">
+                <button onclick="checkAnswer('ex3b-2', 'cortice')">Check Answer</button>
+                <div id="feedback-ex3b-2" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>3. The infection has spread to adjacent __________ (os, ossis - bone).</p>
+                <input type="text" id="ex3b-3" placeholder="Enter correct form">
+                <button onclick="checkAnswer('ex3b-3', 'os')">Check Answer</button>
+                <div id="feedback-ex3b-3" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>4. Blood sample shows elevated levels of __________ (sanguis, sanguinis).</p>
+                <input type="text" id="ex3b-4" placeholder="Enter correct form">
+                <button onclick="checkAnswer('ex3b-4', 'sanguinis')">Check Answer</button>
+                <div id="feedback-ex3b-4" class="feedback"></div>
+            </div>
+        </div>
+
+        <div class="exercise-section">
+            <h2>Exercise 3C: Reading Comprehension</h2>
+            
+            <div class="instructions">
+                <p>Read the following short medical text and answer the questions:</p>
+                <p><em>"Corpus humanum ex multis partibus constat. Os cum osse articulationem format. Sanguis per vasa fluit et cor sanguinem per arterias propellit. Pulmones oxigenium capiunt. Cutis corpus tegit et protegit. Morbi varii has partes corporis afficere possunt."</em></p>
+            </div>
+            
+            <div>
+                <p>1. List all third declension nouns in the nominative case:</p>
+                <input type="text" id="ex3c-1" placeholder="Enter nouns" style="width: 400px;">
+                <button onclick="checkAnswer('ex3c-1', 'corpus os sanguis cor pulmones cutis')">Check Answer</button>
+                <div id="feedback-ex3c-1" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>2. List all third declension nouns in another case (specify which case):</p>
+                <textarea id="ex3c-2" rows="4" cols="50" placeholder="Enter nouns with cases"></textarea>
+                <button onclick="checkContains('ex3c-2', ['partibus', 'osse', 'vasa', 'arterias', 'corporis'])">Check Answer</button>
+                <div id="feedback-ex3c-2" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>3. Translate the text into English:</p>
+                <textarea id="ex3c-3" rows="6" cols="50" placeholder="Enter translation"></textarea>
+                <button onclick="checkContains('ex3c-3', ['human body', 'consists', 'parts', 'bone', 'joint', 'blood', 'flows', 'vessels', 'heart', 'propels', 'arteries', 'lungs', 'oxygen', 'skin', 'covers', 'protects', 'diseases', 'affect'])">Check Answer</button>
+                <div id="feedback-ex3c-3" class="feedback"></div>
+            </div>
+        </div>
+
+        <div class="exercise-section">
+            <h2>Exercise 3D: Clinical Applications</h2>
+            
+            <div class="question">For each clinical scenario, provide the appropriate Latin medical terminology using third declension nouns:</div>
+            
+            <div>
+                <p>1. A patient has inflammation of the kidney. The medical term is:</p>
+                <input type="text" id="ex3d-1" placeholder="Enter medical term">
+                <button onclick="checkAnswer('ex3d-1', 'nephritis')">Check Answer</button>
+                <div id="feedback-ex3d-1" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>2. A doctor is performing a study of heart function. This field is called:</p>
+                <input type="text" id="ex3d-2" placeholder="Enter medical term">
+                <button onclick="checkAnswer('ex3d-2', 'cardiologia')">Check Answer</button>
+                <div id="feedback-ex3d-2" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>3. A surgeon is removing an inflamed appendix. This procedure is called:</p>
+                <input type="text" id="ex3d-3" placeholder="Enter medical term">
+                <button onclick="checkMultipleAnswers('ex3d-3', ['appendectomia', 'appendicectomia'])">Check Answer</button>
+                <div id="feedback-ex3d-3" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>4. A radiologist is recording images of the lungs. This technique is called:</p>
+                <input type="text" id="ex3d-4" placeholder="Enter medical term">
+                <button onclick="checkAnswer('ex3d-4', 'pulmographia')">Check Answer</button>
+                <div id="feedback-ex3d-4" class="feedback"></div>
+            </div>
+        </div>
+
+        <div class="exercise-section">
+            <h2>Exercise 3E: Advanced Case Usage</h2>
+            
+            <div class="question">For each sentence, identify the case of the underlined third declension noun and explain why that case is used:</div>
+            
+            <div>
+                <p>1. Medicus morbum <strong>cordis</strong> diagnosticat. (The doctor diagnoses a disease of the heart.)</p>
+                <p>Case: <input type="text" id="ex3e-1-case" placeholder="Enter case"></p>
+                <p>Reason for usage: <input type="text" id="ex3e-1-reason" placeholder="Enter reason" style="width: 400px;"></p>
+                <button onclick="checkMultipleFields('ex3e-1', ['genitive', 'possession relationship'])">Check Answer</button>
+                <div id="feedback-ex3e-1" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>2. Chirurgus <strong>pulmonem</strong> examinat. (The surgeon examines the lung.)</p>
+                <p>Case: <input type="text" id="ex3e-2-case" placeholder="Enter case"></p>
+                <p>Reason for usage: <input type="text" id="ex3e-2-reason" placeholder="Enter reason" style="width: 400px;"></p>
+                <button onclick="checkMultipleFields('ex3e-2', ['accusative', 'direct object'])">Check Answer</button>
+                <div id="feedback-ex3e-2" class="feedback"></div>
+            </div>
+            
+            <div>
+                <p>3. Medicamentum in <strong>sanguine</strong> dissolvitur. (The medication dissolves in the blood.)</p>
+                <p>Case: <input type="text" id="ex3e-3-case" placeholder="Enter case"></p>
+                <p>Reason for usage: <input type="text" id="ex3e-3-reason" placeholder="Enter reason" style="width: 400px;"></p>
+                <button onclick="checkMultipleFields('ex3e-3', ['ablative', 'location'])">Check Answer</button>
+                <div id="feedback-ex3e-3" class="feedback"></div>
+            </div>
+        </div>
+
+        <div class="nav-buttons">
+            <button onclick="showSection('intermediate')">Previous: Intermediate Level</button>
+            <button onclick="showSection('answer-key')">View Answer Key</button>
+        </div>
+    </div>
+
+    <!-- ANSWER KEY -->
+    <div id="answer-key" class="exercise-level hidden">
+        <h1>Answer Key</h1>
+        
+        <div class="instructions">
+            <p>Use this answer key to check your responses after completing all exercises.</p>
+        </div>
+
+        <div class="exercise-section">
+            <h2>Beginner Level Answers</h2>
+            
+            <h3>Exercise 1A: Understanding the Third Declension</h3>
+            <p>1. cor, cordis (n) - heart</p>
+            <p>2. pulmo, pulmonis (m) - lung</p>
+            <p>3. os, ossis (n) - bone</p>
+            <p>4. cutis, cutis (f) - skin</p>
+            <p>5. dens, dentis (m) - tooth</p>
+            
+            <h3>Exercise 1B: Identifying Cases</h3>
+            <p>1. The doctor examined the patient's <strong>cor</strong> - accusative singular</p>
+            <p>2. The structure of the <strong>ossis</strong> was visible on the X-ray - genitive singular</p>
+            <p>3. The medication affected both <strong>pulmones</strong> - accusative plural</p>
+            <p>4. The surgeon made an incision in the <strong>cute</strong> - ablative singular</p>
+            <p>5. The infection spread through the <strong>sanguine</strong> - ablative singular</p>
+            
+            <h3>Exercise 1C: Basic Declension Practice</h3>
+            <p><strong>dens, dentis (m) - tooth</strong></p>
+            <p>Nominative Singular: dens</p>
+            <p>Genitive Singular: dentis</p>
+            <p>Dative Singular: denti</p>
+            <p>Accusative Singular: dentem</p>
+            <p>Ablative Singular: dente</p>
+            
+            <p><strong>cutis, cutis (f) - skin</strong></p>
+            <p>Nominative Singular: cutis</p>
+            <p>Genitive Singular: cutis</p>
+            <p>Dative Singular: cuti</p>
+            <p>Accusative Singular: cutem</p>
+            <p>Ablative Singular: cute</p>
+            
+            <p><strong>corpus, corporis (n) - body</strong></p>
+            <p>Nominative Singular: corpus</p>
+            <p>Genitive Singular: corporis</p>
+            <p>Dative Singular: corpori</p>
+            <p>Accusative Singular: corpus</p>
+            <p>Ablative Singular: corpore</p>
+        </div>
+
+        <div class="exercise-section">
+            <h2>Intermediate Level Answers</h2>
+            
+            <h3>Exercise 2A: Medical Phrases</h3>
+            <p>1. Inflammation of the lung: inflammatio pulmonis</p>
+            <p>2. Disease of the heart: morbus cordis</p>
+            <p>3. Fracture of the bone: fractura ossis</p>
+            <p>4. Examination of the abdomen: examinatio abdominis</p>
+            <p>5. Pain in the head: dolor capitis</p>
+            
+            <h3>Exercise 2B: Complete the Declension</h3>
+            <p><strong>pulmo, pulmonis (m) - lung</strong></p>
+            <p>Nominative: pulmo, pulmones</p>
+            <p>Genitive: pulmonis, pulmonum</p>
+            <p>Dative: pulmoni, pulmonibus</p>
+            <p>Accusative: pulmonem, pulmones</p>
+            <p>Ablative: pulmone, pulmonibus</p>
+            
+            <p><strong>caput, capitis (n) - head</strong></p>
+            <p>Nominative: caput, capita</p>
+            <p>Genitive: capitis, capitum</p>
+            <p>Dative: capiti, capitibus</p>
+            <p>Accusative: caput, capita</p>
+            <p>Ablative: capite, capitibus</p>
+            
+            <h3>Exercise 2C: Medical Terminology Formation</h3>
+            <p>1. Inflammation of the kidney: nephritis (renitis)</p>
+            <p>2. Study of the heart: cardiologia</p>
+            <p>3. Excision of the appendix: appendicectomia (appendectomia)</p>
+            <p>4. Process of recording the lung: pulmographia</p>
+            
+            <h3>Exercise 2D: Case in Context</h3>
+            <p>1. Medicus <strong>cor</strong> patientis auscultat - Case of "cor": accusative</p>
+            <p>2. <strong>Pulmonis</strong> inflammatio respirationem impedit - Case of "pulmonis": genitive</p>
+            <p>3. Chirurgus <strong>cutem</strong> incidit - Case of "cutem": accusative</p>
+            <p>4. Fractura <strong>ossis</strong> gravis est - Case of "ossis": genitive</p>
+        </div>
+
+        <div class="exercise-section">
+            <h2>Advanced Level Answers</h2>
+            
+            <h3>Exercise 3A: Anatomical Descriptions</h3>
+            <p>1. The base of the lung: basis pulmonis</p>
+            <p>2. The apex of the heart: apex cordis</p>
+            <p>3. The neck of the femur: cervix femoris</p>
+            <p>4. The roots of the teeth: radices dentium</p>
+            
+            <h3>Exercise 3B: Medical Reports</h3>
+            <p>1. Patient presents with acute pain in the <strong>rene</strong> (ablative singular).</p>
+            <p>2. MRI shows abnormal growth in the cerebral <strong>cortice</strong> (ablative singular).</p>
+            <p>3. The infection has spread to adjacent <strong>os</strong> (accusative singular).</p>
+            <p>4. Blood sample shows elevated levels of <strong>sanguinis</strong> (genitive singular).</p>
+            
+            <h3>Exercise 3C: Reading Comprehension</h3>
+            <p>1. Third declension nouns in the nominative case: corpus, os, sanguis, cor, pulmones, cutis</p>
+            <p>2. Third declension nouns in other cases:</p>
+            <ul>
+                <li>partibus (ablative plural)</li>
+                <li>osse (ablative singular)</li>
+                <li>vasa (accusative plural)</li>
+                <li>arterias (accusative plural)</li>
+                <li>corporis (genitive singular)</li>
+            </ul>
+            <p>3. Translation: "The human body consists of many parts. Bone forms a joint with bone. Blood flows through vessels and the heart propels blood through arteries. The lungs capture oxygen. The skin covers and protects the body. Various diseases can affect these parts of the body."</p>
+            
+            <h3>Exercise 3D: Clinical Applications</h3>
+            <p>1. A patient has inflammation of the kidney: nephritis</p>
+            <p>2. A doctor is performing a study of heart function: cardiologia</p>
+            <p>3. A surgeon is removing an inflamed appendix: appendectomia</p>
+            <p>4. A radiologist is recording images of the lungs: pulmographia</p>
+            
+            <h3>Exercise 3E: Advanced Case Usage</h3>
+            <p>1. Medicus morbum <strong>cordis</strong> diagnosticat.</p>
+            <p>Case: genitive</p>
+            <p>Reason for usage: The genitive case is used to show possession or relationship - "disease of the heart"</p>
+            
+            <p>2. Chirurgus <strong>pulmonem</strong> examinat.</p>
+            <p>Case: accusative</p>
+            <p>Reason for usage: The accusative case is used for the direct object of the verb - "examines the lung"</p>
+            
+            <p>3. Medicamentum in <strong>sanguine</strong> dissolvitur.</p>
+            <p>Case: ablative</p>
+            <p>Reason for usage: The ablative case with the preposition "in" indicates location - "in the blood"</p>
+        </div>
+
+        <div class="nav-buttons">
+            <button onclick="showSection('advanced')">Previous: Advanced Level</button>
+            <button onclick="showSection('beginner')">Return to Beginning</button>
+        </div>
+    </div>
+
+    <script>
+        // Track score
+        let score = 0;
+        let totalQuestions = 0;
+        
+        // Count total questions
+        function countTotalQuestions() {
+            const inputs = document.querySelectorAll('input[type="text"], textarea');
+            const uniqueIds = new Set();
+            
+            inputs.forEach(input => {
+                // Skip inputs in tables that are part of declension exercises
+                if (!input.id.includes('-nom-') && !input.id.includes('-gen-') && 
+                    !input.id.includes('-dat-') && !input.id.includes('-acc-') && 
+                    !input.id.includes('-abl-')) {
+                    uniqueIds.add(input.id.split('-').slice(0, 2).join('-'));
+                }
+            });
+            
+            // Add declension exercises
+            document.querySelectorAll('button').forEach(button => {
+                if (button.getAttribute('onclick') && 
+                    (button.getAttribute('onclick').includes('checkDeclension') || 
+                     button.getAttribute('onclick').includes('checkFullDeclension'))) {
+                    uniqueIds.add(button.getAttribute('onclick').split("'")[1]);
+                }
+            });
+            
+            // Add multiple fields exercises
+            document.querySelectorAll('button').forEach(button => {
+                if (button.getAttribute('onclick') && 
+                    button.getAttribute('onclick').includes('checkMultipleFields')) {
+                    uniqueIds.add(button.getAttribute('onclick').split("'")[1]);
+                }
+            });
+            
+            totalQuestions = uniqueIds.size;
+            document.getElementById('total-questions').textContent = totalQuestions;
+        }
+        
+        // Initialize when page loads
+        window.onload = function() {
+            countTotalQuestions();
+            showSection('beginner');
+        };
+        
+        // Show selected section and hide others
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.exercise-level');
+            sections.forEach(section => {
+                section.classList.add('hidden');
+            });
+            
+            document.getElementById(sectionId).classList.remove('hidden');
+            
+            // Update active button
+            const buttons = document.querySelectorAll('.section-nav button');
+            buttons.forEach(button => {
+                button.classList.remove('active-section');
+                if (button.getAttribute('onclick').includes(sectionId)) {
+                    button.classList.add('active-section');
+                }
+            });
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+        
+        // Check a single answer
+        function checkAnswer(id, correctAnswer) {
+            const input = document.getElementById(id);
+            const feedback = document.getElementById('feedback-' + id);
+            const userAnswer = input.value.trim().toLowerCase();
+            
+            if (userAnswer === correctAnswer.toLowerCase()) {
+                feedback.textContent = "Correct!";
+                feedback.className = "feedback correct";
+                if (!input.dataset.scored) {
+                    score++;
+                    document.getElementById('score').textContent = score;
+                    input.dataset.scored = "true";
+                }
+            } else {
+                feedback.textContent = "Try again.";
+                feedback.className = "feedback incorrect";
+            }
+        }
+        
+        // Check multiple possible answers
+        function checkMultipleAnswers(id, correctAnswers) {
+            const input = document.getElementById(id);
+            const feedback = document.getElementById('feedback-' + id);
+            const userAnswer = input.value.trim().toLowerCase();
+            
+            if (correctAnswers.some(answer => userAnswer === answer.toLowerCase())) {
+                feedback.textContent = "Correct!";
+                feedback.className = "feedback correct";
+                if (!input.dataset.scored) {
+                    score++;
+                    document.getElementById('score').textContent = score;
+                    input.dataset.scored = "true";
+                }
+            } else {
+                feedback.textContent = "Try again.";
+                feedback.className = "feedback incorrect";
+            }
+        }
+        
+        // Check if answer contains certain keywords
+        function checkContains(id, keywords) {
+            const input = document.getElementById(id);
+            const feedback = document.getElementById('feedback-' + id);
+            const userAnswer = input.value.trim().toLowerCase();
+            
+            const matchCount = keywords.filter(keyword => 
+                userAnswer.includes(keyword.toLowerCase())).length;
+            
+            if (matchCount >= Math.ceil(keywords.length * 0.7)) {
+                feedback.textContent = "Good answer! You included " + matchCount + " of the " + keywords.length + " key elements.";
+                feedback.className = "feedback correct";
+                if (!input.dataset.scored) {
+                    score++;
+                    document.getElementById('score').textContent = score;
+                    input.dataset.scored = "true";
+                }
+            } else {
+                feedback.textContent = "Try to include more key elements in your answer.";
+                feedback.className = "feedback incorrect";
+            }
+        }
+        
+        // Check declension table
+        function checkDeclension(id, correctForms) {
+            const cases = ['nom', 'gen', 'dat', 'acc', 'abl'];
+            const feedback = document.getElementById('feedback-' + id);
+            let allCorrect = true;
+            let correctCount = 0;
+            
+            for (let i = 0; i < cases.length; i++) {
+                const input = document.getElementById(id + '-' + cases[i] + '-s');
+                const userAnswer = input.value.trim().toLowerCase();
+                
+                if (userAnswer === correctForms[i].toLowerCase()) {
+                    input.style.backgroundColor = "#d4edda";
+                    correctCount++;
+                } else {
+                    input.style.backgroundColor = "#f8d7da";
+                    allCorrect = false;
+                }
+            }
+            
+            if (allCorrect) {
+                feedback.textContent = "All forms are correct!";
+                feedback.className = "feedback correct";
+                if (!document.getElementById(id + '-nom-s').dataset.scored) {
+                    score++;
+                    document.getElementById('score').textContent = score;
+                    document.getElementById(id + '-nom-s').dataset.scored = "true";
+                }
+            } else {
+                feedback.textContent = "You got " + correctCount + " out of 5 forms correct. Try again.";
+                feedback.className = "feedback incorrect";
+            }
+        }
+        
+        // Check full declension table (singular and plural)
+        function checkFullDeclension(id, correctFormsSingular, correctFormsPlural) {
+            const cases = ['nom', 'gen', 'dat', 'acc', 'abl'];
+            const feedback = document.getElementById('feedback-' + id);
+            let allCorrect = true;
+            let correctCount = 0;
+            const totalForms = cases.length * 2;
+            
+            // Check singular forms
+            for (let i = 0; i < cases.length; i++) {
+                const input = document.getElementById(id + '-' + cases[i] + '-s');
+                const userAnswer = input.value.trim().toLowerCase();
+                
+                if (userAnswer === correctFormsSingular[i].toLowerCase()) {
+                    input.style.backgroundColor = "#d4edda";
+                    correctCount++;
+                } else {
+                    input.style.backgroundColor = "#f8d7da";
+                    allCorrect = false;
+                }
+            }
+            
+            // Check plural forms
+            for (let i = 0; i < cases.length; i++) {
+                const input = document.getElementById(id + '-' + cases[i] + '-p');
+                const userAnswer = input.value.trim().toLowerCase();
+                
+                if (userAnswer === correctFormsPlural[i].toLowerCase()) {
+                    input.style.backgroundColor = "#d4edda";
+                    correctCount++;
+                } else {
+                    input.style.backgroundColor = "#f8d7da";
+                    allCorrect = false;
+                }
+            }
+            
+            if (allCorrect) {
+                feedback.textContent = "All forms are correct!";
+                feedback.className = "feedback correct";
+                if (!document.getElementById(id + '-nom-s').dataset.scored) {
+                    score++;
+                    document.getElementById('score').textContent = score;
+                    document.getElementById(id + '-nom-s').dataset.scored = "true";
+                }
+            } else {
+                feedback.textContent = "You got " + correctCount + " out of " + totalForms + " forms correct. Try again.";
+                feedback.className = "feedback incorrect";
+            }
+        }
+        
+        // Check multiple fields for a single question
+        function checkMultipleFields(id, correctAnswers) {
+            const caseInput = document.getElementById(id + '-case');
+            const reasonInput = document.getElementById(id + '-reason');
+            const feedback = document.getElementById('feedback-' + id);
+            
+            const caseCorrect = caseInput.value.trim().toLowerCase() === correctAnswers[0].toLowerCase();
+            const reasonCorrect = correctAnswers[1].split(' ').some(word => 
+                reasonInput.value.trim().toLowerCase().includes(word.toLowerCase()));
+            
+            if (caseCorrect) {
+                caseInput.style.backgroundColor = "#d4edda";
+            } else {
+                caseInput.style.backgroundColor = "#f8d7da";
+            }
+            
+            if (reasonCorrect) {
+                reasonInput.style.backgroundColor = "#d4edda";
+            } else {
+                reasonInput.style.backgroundColor = "#f8d7da";
+            }
+            
+            if (caseCorrect && reasonCorrect) {
+                feedback.textContent = "Correct!";
+                feedback.className = "feedback correct";
+                if (!caseInput.dataset.scored) {
+                    score++;
+                    document.getElementById('score').textContent = score;
+                    caseInput.dataset.scored = "true";
+                }
+            } else {
+                feedback.textContent = "Try again. " + 
+                    (caseCorrect ? "Case is correct. " : "Case is incorrect. ") + 
+                    (reasonCorrect ? "Reason is correct." : "Reason is incorrect.");
+                feedback.className = "feedback incorrect";
+            }
+        }
+    </script>
+</body>
+</html>
